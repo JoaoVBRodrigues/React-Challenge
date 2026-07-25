@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: $text-primary;
+  font-size: $font-size-sm;
+}
+
+.table th {
+  background-color: $primary-header;
+  color: $text-primary;
+  font-weight: $font-weight-bold;
+  text-align: left;
+  padding: $spacing-md $spacing-lg;
+
+  &:first-child {
+    border-top-left-radius: $radius-md;
+    border-bottom-left-radius: $radius-md;
+  }
+
+  &:last-child {
+    border-top-right-radius: $radius-md;
+    border-bottom-right-radius: $radius-md;
+  }
+}
+
+.table td {
+  padding: $spacing-md $spacing-lg;
+  border-bottom: 1px solid $border-color;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $bg-card;
+  }
+}
+
+.idCell {
+  font-family: monospace;
+  color: $text-secondary;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viewProfileLink {
+  color: $text-link;
+  font-weight: $font-weight-semibold;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+}
+
+// Mobile responsive column hiding
+@media (max-width: $breakpoint-mobile) {
+  .hideMobile {
+    display: none;
+  }
+
+  .table th,
+  .table td {
+    padding: $spacing-md $spacing-sm;
+  }
+}
+
+// Loading & Error States
+.statusMessage {
+  text-align: center;
+  padding: $spacing-2xl $spacing-md;
+  color: $text-secondary;
+  font-size: $font-size-md;
+}
+
+.errorMessage {
+  text-align: center;
+  padding: $spacing-2xl $spacing-md;
+  color: $status-error;
+  font-size: $font-size-md;
+}
+
+.skeletonRow td {
+  padding: $spacing-md $spacing-lg;
+}
+
+.skeletonBar {
+  height: 20px;
+  background: linear-gradient(90deg, $bg-subtle 25%, rgba(255, 255, 255, 0.08) 50%, $bg-subtle 75%);
+  background-size: 200% 100%;
+  animation: loadingPulse 1.5s infinite ease-in-out;
+  border-radius: $radius-sm;
+}
+
+@keyframes loadingPulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

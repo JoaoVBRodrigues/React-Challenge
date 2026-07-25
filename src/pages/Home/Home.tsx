@@ -1,22 +1,15 @@
 import { useUsers } from '@/hooks/useUsers';
+import { UserList } from '@/components/UserList/UserList';
 
 export function Home() {
   const { data, isLoading, isError } = useUsers(1);
 
-  if (isLoading) {
-    return <p>Carregando usuários...</p>;
-  }
-
-  if (isError) {
-    return <p>Erro ao carregar usuários.</p>;
-  }
-
   return (
-    <div>
-      <h1>Home</h1>
-      <pre style={{ background: '#f1f5f9', padding: '1rem', borderRadius: '8px', overflow: 'auto' }}>
-        {JSON.stringify(data, null, 2)}
-      </pre>
-    </div>
+    <main style={{ padding: '2rem 1rem', maxWidth: '1000px', margin: '0 auto' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2.25rem' }}>
+        Find People
+      </h1>
+      <UserList users={data?.results} isLoading={isLoading} isError={isError} />
+    </main>
   );
 }
