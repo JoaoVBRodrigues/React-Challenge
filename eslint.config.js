@@ -1,3 +1,4 @@
+import storybook from 'eslint-plugin-storybook';
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -7,7 +8,8 @@ import prettier from 'eslint-config-prettier';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 
 export default tseslint.config(
-  { ignores: ['dist', 'node_modules'] },
+  { ignores: ['dist', 'node_modules', 'storybook-static'] },
+  ...storybook.configs['flat/recommended'],
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended, prettier],
     files: ['**/*.{ts,tsx}'],
@@ -24,6 +26,7 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'prettier/prettier': 'error',
+      'storybook/no-renderer-packages': 'off',
     },
     settings: {
       react: {
