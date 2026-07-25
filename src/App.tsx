@@ -1,12 +1,8 @@
-import { TestCard } from '@/components/TestCard/TestCard';
+import { RouterProvider } from 'react-router-dom';
+import { router } from '@/app/router';
 
 function App() {
-  return (
-    <main style={{ padding: '2rem' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>Find People — Development</h1>
-      <TestCard />
-    </main>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
