@@ -1,0 +1,27 @@
+.card {
+  background-color: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  box-shadow: $shadow-md;
+  max-width: 400px;
+  margin: $spacing-xl auto;
+  text-align: center;
+}
+
+.title {
+  color: $primary-color;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-sm;
+}
+
+.badge {
+  display: inline-block;
+  background-color: $primary-light;
+  color: $primary-color;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
