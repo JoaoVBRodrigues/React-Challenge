@@ -15,7 +15,7 @@ export function NotFound() {
         <p className={styles.description}>
           Desculpe, o perfil ou a página que você está procurando não existe ou foi removida.
         </p>
-        <Link to=".." className={styles.homeButton}>
+        <Link to="/" className={styles.homeButton}>
           Voltar para a Home
         </Link>
       </motion.div>

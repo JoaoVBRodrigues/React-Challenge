@@ -37,3 +37,6 @@ docs/
 *.sw?
 Thumbs.db
 
+
+.vercel
+.env*
