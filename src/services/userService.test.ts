@@ -1,4 +1,5 @@
-import { getUsers } from './userService';
+import { QueryClient } from '@tanstack/react-query';
+import { getUsers, getUserById } from './userService';
 
 describe('userService', () => {
   beforeEach(() => {
@@ -45,5 +46,47 @@ describe('userService', () => {
     } as unknown as Response);
 
     await expect(getUsers(1, 10)).rejects.toThrow('Falha ao buscar usuários da API (status 500)');
+  });
+
+  describe('getUserById', () => {
+    it('should find and return user by uuid from queryClient cache', () => {
+      const queryClient = new QueryClient();
+      const mockUser = {
+        name: { first: 'Alice', last: 'Smith' },
+        email: 'alice@example.com',
+        cell: '111-222-3333',
+        picture: { large: 'url', medium: 'url', thumbnail: 'url' },
+        dob: { date: '1992-02-02', age: 32 },
+        registered: { date: '2019-01-01', age: 5 },
+        location: { city: 'Paris', country: 'France' },
+        login: { uuid: 'target-uuid-123' },
+        nat: 'FR',
+      };
+
+      queryClient.setQueryData(['users', 'all'], {
+        results: [mockUser],
+        info: { seed: 'findpeople', results: 1, page: 1, version: '1.4' },
+      });
+
+      const user = getUserById(queryClient, 'target-uuid-123');
+      expect(user).toEqual(mockUser);
+    });
+
+    it('should return undefined if user uuid is not found in cache', () => {
+      const queryClient = new QueryClient();
+      queryClient.setQueryData(['users', 'all'], {
+        results: [],
+        info: { seed: 'findpeople', results: 0, page: 1, version: '1.4' },
+      });
+
+      const user = getUserById(queryClient, 'non-existent-uuid');
+      expect(user).toBeUndefined();
+    });
+
+    it('should return undefined if queryClient cache is empty', () => {
+      const queryClient = new QueryClient();
+      const user = getUserById(queryClient, 'any-uuid');
+      expect(user).toBeUndefined();
+    });
   });
 });
