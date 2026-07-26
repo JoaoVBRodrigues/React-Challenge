@@ -44,3 +44,15 @@
     border-color: $primary-hover;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .paginationContainer {
+    gap: $spacing-xs;
+  }
+
+  .pageButton {
+    width: 32px;
+    height: 32px;
+    font-size: $font-size-xs;
+  }
+}

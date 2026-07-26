@@ -151,3 +151,20 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .backButton {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .tabs {
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+}

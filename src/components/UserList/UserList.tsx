@@ -49,7 +49,7 @@ export function UserList({
               <th className={styles.hideMobile}>Title</th>
               <th className={styles.hideMobile}>Date</th>
               <th className={styles.hideMobile}>Age</th>
-              <th className={styles.hideMobile}>Actions</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <motion.tbody variants={containerVariants} initial="hidden" animate="visible">
@@ -73,7 +73,7 @@ export function UserList({
                 <td className={styles.hideMobile}>
                   <div className={styles.skeletonBar} style={{ width: '40px' }} />
                 </td>
-                <td className={styles.hideMobile}>
+                <td>
                   <div className={styles.skeletonBar} style={{ width: '80px' }} />
                 </td>
               </motion.tr>
@@ -108,7 +108,7 @@ export function UserList({
             <th className={styles.hideMobile}>Title</th>
             <th className={styles.hideMobile}>Date</th>
             <th className={styles.hideMobile}>Age</th>
-            <th className={styles.hideMobile}>Actions</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <motion.tbody variants={containerVariants} initial="hidden" animate="visible">
@@ -126,7 +126,7 @@ export function UserList({
                 <td className={styles.hideMobile}>{user.name.title || '-'}</td>
                 <td className={styles.hideMobile}>{formattedDate}</td>
                 <td className={styles.hideMobile}>{user.dob?.age ?? '-'}</td>
-                <td className={styles.hideMobile}>
+                <td>
                   <Link to={`/user/${user.login.uuid}`} className={styles.viewProfileLink}>
                     View profile
                   </Link>
