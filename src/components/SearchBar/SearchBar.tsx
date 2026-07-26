@@ -11,6 +11,12 @@ interface SearchBarProps {
 export function SearchBar({ onSearch, initialFilters }: SearchBarProps) {
   const [query, setQuery] = useState(initialFilters?.query ?? '');
 
+  useEffect(() => {
+    if (initialFilters?.query !== undefined && initialFilters.query !== query) {
+      setQuery(initialFilters.query);
+    }
+  }, [initialFilters?.query]);
+
   const debouncedQuery = useDebounce(query, 400);
 
   const onSearchRef = useRef(onSearch);

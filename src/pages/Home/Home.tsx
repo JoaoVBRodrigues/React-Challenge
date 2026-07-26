@@ -1,4 +1,5 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useUsers } from '@/hooks/useUsers';
 import { useUserSearch } from '@/hooks/useUserSearch';
 import { UserList } from '@/components/UserList/UserList';
@@ -7,22 +8,49 @@ import { SearchBar } from '@/components/SearchBar/SearchBar';
 import type { SearchFilters } from '@/types/filter';
 
 export function Home() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [filters, setFilters] = useState<SearchFilters>({
-    query: '',
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const currentPage = parseInt(searchParams.get('page') || '1', 10);
+  const filters: SearchFilters = {
+    query: searchParams.get('q') || '',
+  };
 
   const { allUsers, isLoading, isError } = useUsers();
 
-  const handleSearch = useCallback((newFilters: SearchFilters) => {
-    setFilters((prev) => {
-      if (prev.query === newFilters.query) {
-        return prev;
-      }
-      setCurrentPage(1);
-      return newFilters;
-    });
-  }, []);
+  const handleSearch = useCallback(
+    (newFilters: SearchFilters) => {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        if (newFilters.query) {
+          next.set('q', newFilters.query);
+        } else {
+          next.delete('q');
+        }
+
+        if (newFilters.query !== filters.query) {
+          next.delete('page');
+        }
+
+        return next;
+      });
+    },
+    [setSearchParams, filters.query]
+  );
+
+  const handlePageChange = useCallback(
+    (page: number) => {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        if (page > 1) {
+          next.set('page', page.toString());
+        } else {
+          next.delete('page');
+        }
+        return next;
+      });
+    },
+    [setSearchParams]
+  );
 
   const { paginatedUsers, totalPages } = useUserSearch(allUsers, filters, currentPage, 10);
 
@@ -31,13 +59,13 @@ export function Home() {
       <h1 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2.25rem' }}>
         Find People
       </h1>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} initialFilters={filters} />
       <UserList users={paginatedUsers} isLoading={isLoading} isError={isError} />
       {!isLoading && !isError && (
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
-          onPageChange={setCurrentPage}
+          onPageChange={handlePageChange}
         />
       )}
     </main>
