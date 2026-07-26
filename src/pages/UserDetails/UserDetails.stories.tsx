@@ -16,7 +16,7 @@ const mockUser: User = {
   },
   dob: { date: '1993-02-11T00:00:00.000Z', age: 30 },
   registered: { date: '2023-02-11T00:00:00.000Z', age: 1 },
-  location: { city: 'Billings', country: 'United States' },
+  location: { street: { number: 123, name: 'Main St' }, city: 'Billings', country: 'United States' },
   nat: 'US',
 };
 

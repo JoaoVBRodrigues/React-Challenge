@@ -1,9 +1,8 @@
-import { render, screen, act } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { Home } from './Home';
 import { useUsers } from '@/hooks/useUsers';
 import { useUserSearch } from '@/hooks/useUserSearch';
-import React from 'react';
 
 jest.mock('@/hooks/useUsers');
 jest.mock('@/hooks/useUserSearch');
@@ -35,9 +34,8 @@ describe('Home component', () => {
 
     mockUseUserSearch.mockReturnValue({
       paginatedUsers: [],
-      totalPages: 0,
-      totalUsers: 0,
-    });
+      totalPages: 0, filteredUsers: [], hasActiveFilters: false,
+      });
 
     renderComponent();
 
@@ -54,9 +52,8 @@ describe('Home component', () => {
 
     mockUseUserSearch.mockReturnValue({
       paginatedUsers: [],
-      totalPages: 3,
-      totalUsers: 30,
-    });
+      totalPages: 3, filteredUsers: [], hasActiveFilters: false,
+      });
 
     renderComponent();
     // Verify that a pagination element is present. E.g., the page "1" button.
@@ -74,9 +71,8 @@ describe('Home component', () => {
 
     mockUseUserSearch.mockReturnValue({
       paginatedUsers: [],
-      totalPages: 3,
-      totalUsers: 30,
-    });
+      totalPages: 3, filteredUsers: [], hasActiveFilters: false,
+      });
 
     renderComponent();
 
@@ -94,9 +90,8 @@ describe('Home component', () => {
 
     mockUseUserSearch.mockReturnValue({
       paginatedUsers: [],
-      totalPages: 3,
-      totalUsers: 30,
-    });
+      totalPages: 3, filteredUsers: [], hasActiveFilters: false,
+      });
 
     renderComponent();
 

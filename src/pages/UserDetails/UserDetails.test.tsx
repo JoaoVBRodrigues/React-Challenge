@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { UserDetails } from './UserDetails';
 import { useUser } from '@/hooks/useUser';
-import React from 'react';
 
 jest.mock('@/hooks/useUser');
 

@@ -12,7 +12,7 @@ const mockUsers: User[] = [
     picture: { large: '', medium: '', thumbnail: '' },
     dob: { date: '1993-02-11T00:00:00.000Z', age: 30 },
     registered: { date: '2023-02-11T00:00:00.000Z', age: 1 },
-    location: { city: 'New York', country: 'USA' },
+    location: { street: { number: 123, name: 'Main St' }, city: 'New York', country: 'USA' },
     nat: 'US',
   },
   {
@@ -23,7 +23,7 @@ const mockUsers: User[] = [
     picture: { large: '', medium: '', thumbnail: '' },
     dob: { date: '1976-05-01T00:00:00.000Z', age: 47 },
     registered: { date: '2023-05-01T00:00:00.000Z', age: 1 },
-    location: { city: 'London', country: 'UK' },
+    location: { street: { number: 123, name: 'Main St' }, city: 'London', country: 'UK' },
     nat: 'GB',
   },
   {
@@ -34,7 +34,7 @@ const mockUsers: User[] = [
     picture: { large: '', medium: '', thumbnail: '' },
     dob: { date: '2005-05-05T00:00:00.000Z', age: 18 },
     registered: { date: '2015-05-05T00:00:00.000Z', age: 9 },
-    location: { city: 'Sydney', country: 'Australia' },
+    location: { street: { number: 123, name: 'Main St' }, city: 'Sydney', country: 'Australia' },
     nat: 'AU',
   },
 ];

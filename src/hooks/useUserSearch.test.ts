@@ -15,7 +15,7 @@ const mockUsers: User[] = Array.from({ length: 25 }, (_, i) => ({
   picture: { large: '', medium: '', thumbnail: '' },
   dob: { date: '1990-01-01', age: 20 + i },
   registered: { date: '2020-01-01', age: 4 },
-  location: { city: 'City', country: 'Country' },
+  location: { street: { number: 123, name: 'Main St' }, city: 'City', country: 'Country' },
   nat: 'US',
 }));
 
