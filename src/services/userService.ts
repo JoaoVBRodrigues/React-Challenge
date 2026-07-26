@@ -18,3 +18,16 @@ export async function getUsers(
   const data: RandomUserResponse = await response.json();
   return data;
 }
+
+export async function getAllUsers(totalCount: number = 100): Promise<RandomUserResponse> {
+  const url = `${BASE_URL}?page=1&results=${totalCount}&seed=${DEFAULT_SEED}`;
+
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Falha ao buscar usuários da API (status ${response.status})`);
+  }
+
+  const data: RandomUserResponse = await response.json();
+  return data;
+}

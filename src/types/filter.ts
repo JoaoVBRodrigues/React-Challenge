@@ -1,5 +1,6 @@
 export interface SearchFilters {
-  firstName: string;
-  lastName: string;
-  age: string;
+  query: string;
+  firstName?: string;
+  lastName?: string;
+  age?: string;
 }

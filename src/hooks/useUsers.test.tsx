@@ -25,7 +25,7 @@ describe('useUsers hook', () => {
     jest.clearAllMocks();
   });
 
-  it('should fetch and return user data for a given page', async () => {
+  it('should fetch and return all users dataset', async () => {
     const mockData = {
       results: [
         {
@@ -40,12 +40,12 @@ describe('useUsers hook', () => {
           nat: 'GB',
         },
       ],
-      info: { seed: 'findpeople', results: 10, page: 1, version: '1.4' },
+      info: { seed: 'findpeople', results: 100, page: 1, version: '1.4' },
     };
 
-    (userService.getUsers as jest.Mock).mockResolvedValue(mockData);
+    (userService.getAllUsers as jest.Mock).mockResolvedValue(mockData);
 
-    const { result } = renderHook(() => useUsers(1), {
+    const { result } = renderHook(() => useUsers(), {
       wrapper: createWrapper(),
     });
 
@@ -53,8 +53,9 @@ describe('useUsers hook', () => {
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
-    expect(userService.getUsers).toHaveBeenCalledWith(1, 10);
-    expect(result.current.data).toEqual(mockData);
+    expect(userService.getAllUsers).toHaveBeenCalledWith(100);
+    expect(result.current.allUsers).toHaveLength(1);
+    expect(result.current.allUsers[0].name.first).toBe('Jane');
     expect(result.current.isError).toBe(false);
   });
 });

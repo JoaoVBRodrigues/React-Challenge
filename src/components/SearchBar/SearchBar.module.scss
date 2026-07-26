@@ -1,39 +1,22 @@
 .searchContainer {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto $spacing-xl auto;
 }
 
-.inputsWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 120px;
-  gap: $spacing-md;
-
-  @media (max-width: $breakpoint-mobile) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.inputGroup {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-xs;
-}
-
-.label {
-  font-size: $font-size-xs;
-  font-weight: $font-weight-medium;
-  color: $text-secondary;
+.inputWrapper {
+  position: relative;
+  width: 100%;
 }
 
 .input {
   width: 100%;
-  padding: $spacing-md $spacing-lg;
+  padding: 0.875rem 1.25rem;
   background-color: $bg-input;
   border: 1px solid $border-color;
   border-radius: $radius-md;
   color: $text-primary;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   transition: all 0.2s ease;
 
   &::placeholder {
