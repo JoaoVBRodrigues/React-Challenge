@@ -29,9 +29,10 @@ export function SearchBar({ onSearch, initialFilters }: SearchBarProps) {
       <div className={styles.inputWrapper}>
         <input
           id="search-people-input"
-          type="text"
+          type="search"
           className={styles.input}
           placeholder="Search people...."
+          aria-label="Pesquisar usuários"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           autoComplete="off"

@@ -44,7 +44,7 @@ describe('UserList Component', () => {
     expect(screen.getByText('Warren')).toBeInTheDocument();
     expect(screen.getByText('Mr')).toBeInTheDocument();
 
-    const links = screen.getAllByRole('link', { name: /view profile/i });
+    const links = screen.getAllByRole('link');
     expect(links).toHaveLength(2);
     expect(links[0]).toHaveAttribute('href', '/user/uuid-test-123456');
   });

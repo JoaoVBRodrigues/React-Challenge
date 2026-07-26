@@ -127,7 +127,11 @@ export function UserList({
                 <td className={styles.hideMobile}>{formattedDate}</td>
                 <td className={styles.hideMobile}>{user.dob?.age ?? '-'}</td>
                 <td>
-                  <Link to={`/user/${user.login.uuid}`} className={styles.viewProfileLink}>
+                  <Link
+                    to={`/user/${user.login.uuid}`}
+                    className={styles.viewProfileLink}
+                    aria-label={`Ver perfil de ${user.name.first} ${user.name.last}`}
+                  >
                     View profile
                   </Link>
                 </td>

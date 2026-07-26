@@ -39,7 +39,11 @@ export function UserDetails() {
 
   return (
     <div className={styles.container}>
-      <button className={styles.backButton} onClick={() => navigate(-1)}>
+      <button
+        className={styles.backButton}
+        onClick={() => navigate(-1)}
+        aria-label="Voltar para a lista de usuários"
+      >
         Back
       </button>
 
@@ -52,17 +56,42 @@ export function UserDetails() {
           <p className={styles.title}>{user.name.title}</p>
         </div>
 
-        <div className={styles.tabs}>
-          <button className={`${styles.tab} ${styles.activeTab}`}>Info</button>
-          <button className={styles.tab} disabled>
+        <div className={styles.tabs} role="tablist">
+          <button
+            className={`${styles.tab} ${styles.activeTab}`}
+            role="tab"
+            aria-selected="true"
+            aria-controls="tabpanel-info"
+            id="tab-info"
+          >
+            Info
+          </button>
+          <button
+            className={styles.tab}
+            disabled
+            role="tab"
+            aria-selected="false"
+            aria-label="Aba Location indisponível"
+          >
             Location
           </button>
-          <button className={styles.tab} disabled>
+          <button
+            className={styles.tab}
+            disabled
+            role="tab"
+            aria-selected="false"
+            aria-label="Aba Login indisponível"
+          >
             Login
           </button>
         </div>
 
-        <div className={styles.detailsList}>
+        <div
+          className={styles.detailsList}
+          role="tabpanel"
+          id="tabpanel-info"
+          aria-labelledby="tab-info"
+        >
           <div className={styles.detailItem}>
             <span className={styles.label}>First Name</span>
             <span className={styles.value}>{user.name.first}</span>

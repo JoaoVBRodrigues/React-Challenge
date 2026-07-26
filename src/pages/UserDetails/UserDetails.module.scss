@@ -30,6 +30,14 @@
   &:hover {
     color: #ffffff;
   }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px $bg-main,
+      0 0 0 4px $primary-color;
+    border-radius: $radius-sm;
+  }
 }
 
 .profileHeader {
@@ -99,6 +107,12 @@
 
   &:disabled {
     cursor: default;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: $radius-sm;
   }
 }
 

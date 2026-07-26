@@ -57,10 +57,19 @@
   color: $text-link;
   font-weight: $font-weight-semibold;
   transition: opacity 0.2s ease;
+  border-radius: $radius-sm;
+  padding: 0.25rem;
 
   &:hover {
     opacity: 0.8;
     text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px $bg-main,
+      0 0 0 4px $primary-color;
   }
 }
 
