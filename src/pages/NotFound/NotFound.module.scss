@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-color: transparent; /* inherits from global */
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(135deg, #a855f7, #6b21a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -4px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #a1a1aa;
+  max-width: 400px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 9999px; /* Pill shape */
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
