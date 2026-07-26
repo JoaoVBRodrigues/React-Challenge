@@ -1,5 +1,4 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { motion } from 'motion/react';
 import { useUser } from '@/hooks/useUser';
 import { NotFound } from '@/pages/NotFound/NotFound';
 import styles from './UserDetails.module.scss';
@@ -40,16 +39,11 @@ export function UserDetails() {
 
   return (
     <div className={styles.container}>
-      <motion.div
-        className={styles.wrapper}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
-      >
-        <button className={styles.backButton} onClick={() => navigate(-1)}>
-          Back
-        </button>
+      <button className={styles.backButton} onClick={() => navigate(-1)}>
+        Back
+      </button>
 
+      <div className={styles.wrapper}>
         <div className={styles.profileHeader}>
           <div className={styles.photoWrapper}>
             <img src={user.picture.large} alt={`Foto de ${fullName}`} />
@@ -92,7 +86,7 @@ export function UserDetails() {
             <span className={styles.value}>{user.dob?.age ?? '-'}</span>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

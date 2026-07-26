@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion, useReducedMotion } from 'motion/react';
 import type { User } from '@/types/user';
 import { EmptyState } from '@/components/EmptyState/EmptyState';
 import styles from './UserList.module.scss';
@@ -16,6 +17,22 @@ export function UserList({
   isError = false,
   errorMessage = 'Não foi possível carregar os usuários.',
 }: UserListProps) {
+  const shouldReduceMotion = useReducedMotion();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
   if (isError) {
     return <div className={styles.errorMessage}>{errorMessage}</div>;
   }
@@ -35,9 +52,9 @@ export function UserList({
               <th className={styles.hideMobile}>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <motion.tbody variants={containerVariants} initial="hidden" animate="visible">
             {Array.from({ length: 5 }).map((_, index) => (
-              <tr key={index} className={styles.skeletonRow}>
+              <motion.tr key={index} className={styles.skeletonRow} variants={itemVariants}>
                 <td>
                   <div className={styles.skeletonBar} style={{ width: '80px' }} />
                 </td>
@@ -59,9 +76,9 @@ export function UserList({
                 <td className={styles.hideMobile}>
                   <div className={styles.skeletonBar} style={{ width: '80px' }} />
                 </td>
-              </tr>
+              </motion.tr>
             ))}
-          </tbody>
+          </motion.tbody>
         </table>
       </div>
     );
@@ -94,13 +111,13 @@ export function UserList({
             <th className={styles.hideMobile}>Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <motion.tbody variants={containerVariants} initial="hidden" animate="visible">
           {users.map((user) => {
             const shortUuid = user.login.uuid ? user.login.uuid.slice(0, 12) : '-';
             const formattedDate = user.registered?.date ? formatDate(user.registered.date) : '-';
 
             return (
-              <tr key={user.login.uuid}>
+              <motion.tr key={user.login.uuid} variants={itemVariants}>
                 <td className={styles.idCell} title={user.login.uuid}>
                   {shortUuid}
                 </td>
@@ -114,10 +131,10 @@ export function UserList({
                     View profile
                   </Link>
                 </td>
-              </tr>
+              </motion.tr>
             );
           })}
-        </tbody>
+        </motion.tbody>
       </table>
     </div>
   );
