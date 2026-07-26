@@ -43,7 +43,7 @@ describe('UserDetails component', () => {
 
     renderComponent('/user/invalid-id');
 
-    expect(screen.getByText('Página Não Encontrada (404)')).toBeInTheDocument();
+    expect(screen.getByText('Página Não Encontrada')).toBeInTheDocument();
   });
 
   it('should render user details when user is found', () => {

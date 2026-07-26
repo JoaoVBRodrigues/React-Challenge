@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1785078674869" clover="3.2.0">
+  <project timestamp="1785078674870" name="All files">
+    <metrics statements="194" coveredstatements="175" conditionals="180" coveredconditionals="130" methods="40" coveredmethods="36" elements="414" coveredelements="341" complexity="0" loc="194" ncloc="194" packages="10" files="13" classes="13"/>
+    <package name="components.EmptyState">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="EmptyState.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\components\EmptyState\EmptyState.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Pagination">
+      <metrics statements="23" coveredstatements="23" conditionals="11" coveredconditionals="8" methods="6" coveredmethods="6"/>
+      <file name="Pagination.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\components\Pagination\Pagination.tsx">
+        <metrics statements="23" coveredstatements="23" conditionals="11" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="17" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="23" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="42" count="6" type="stmt"/>
+        <line num="55" count="23" type="stmt"/>
+        <line num="56" count="23" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.SearchBar">
+      <metrics statements="14" coveredstatements="13" conditionals="8" coveredconditionals="6" methods="5" coveredmethods="4"/>
+      <file name="SearchBar.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\components\SearchBar\SearchBar.tsx">
+        <metrics statements="14" coveredstatements="13" conditionals="8" coveredconditionals="6" methods="5" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="8" type="cond" truecount="6" falsecount="2"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.TestCard">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="TestCard.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\components\TestCard\TestCard.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.UserList">
+      <metrics statements="24" coveredstatements="23" conditionals="30" coveredconditionals="23" methods="4" coveredmethods="4"/>
+      <file name="UserList.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\components\UserList\UserList.tsx">
+        <metrics statements="24" coveredstatements="23" conditionals="30" coveredconditionals="23" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="36" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="40" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="57" count="10" type="stmt"/>
+        <line num="87" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="3" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="92" count="2" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="94" count="2" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="116" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="117" count="2" type="cond" truecount="4" falsecount="2"/>
+        <line num="119" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="56" coveredstatements="51" conditionals="83" coveredconditionals="57" methods="10" coveredmethods="10"/>
+      <file name="useDebounce.ts" path="C:\Users\João\Documents\Desafio-Frontend\src\hooks\useDebounce.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+      </file>
+      <file name="useUser.ts" path="C:\Users\João\Documents\Desafio-Frontend\src\hooks\useUser.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+      </file>
+      <file name="useUserSearch.ts" path="C:\Users\João\Documents\Desafio-Frontend\src\hooks\useUserSearch.ts">
+        <metrics statements="33" coveredstatements="28" conditionals="74" coveredconditionals="49" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="28" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="35" count="4" type="cond" truecount="4" falsecount="1"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="43" count="100" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="75" type="cond" truecount="4" falsecount="2"/>
+        <line num="45" count="75" type="cond" truecount="4" falsecount="2"/>
+        <line num="46" count="75" type="stmt"/>
+        <line num="47" count="75" type="cond" truecount="4" falsecount="2"/>
+        <line num="48" count="75" type="cond" truecount="6" falsecount="2"/>
+        <line num="51" count="75" type="cond" truecount="5" falsecount="0"/>
+        <line num="57" count="75" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="27" type="cond" truecount="2" falsecount="2"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="27" type="cond" truecount="2" falsecount="2"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="27" type="cond" truecount="2" falsecount="2"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="75" count="27" type="stmt"/>
+        <line num="78" count="4" type="stmt"/>
+        <line num="79" count="4" type="stmt"/>
+        <line num="81" count="4" type="stmt"/>
+        <line num="82" count="4" type="stmt"/>
+        <line num="84" count="4" type="stmt"/>
+      </file>
+      <file name="useUsers.ts" path="C:\Users\João\Documents\Desafio-Frontend\src\hooks\useUsers.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.Home">
+      <metrics statements="18" coveredstatements="16" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="Home.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\pages\Home\Home.tsx">
+        <metrics statements="18" coveredstatements="16" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.NotFound">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="NotFound.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\pages\NotFound\NotFound.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.UserDetails">
+      <metrics statements="23" coveredstatements="21" conditionals="24" coveredconditionals="19" methods="3" coveredmethods="2"/>
+      <file name="UserDetails.tsx" path="C:\Users\João\Documents\Desafio-Frontend\src\pages\UserDetails\UserDetails.tsx">
+        <metrics statements="23" coveredstatements="21" conditionals="24" coveredconditionals="19" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="25" coveredstatements="17" conditionals="17" coveredconditionals="11" methods="6" coveredmethods="4"/>
+      <file name="userService.ts" path="C:\Users\João\Documents\Desafio-Frontend\src\services\userService.ts">
+        <metrics statements="25" coveredstatements="17" conditionals="17" coveredconditionals="11" methods="6" coveredmethods="4"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="5" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="45" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="3" type="cond" truecount="8" falsecount="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>
