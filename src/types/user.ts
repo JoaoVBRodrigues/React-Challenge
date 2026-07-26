@@ -21,6 +21,10 @@ export interface User {
     age: number;
   };
   location: {
+    street: {
+      number: number;
+      name: string;
+    };
     city: string;
     state?: string;
     country: string;
