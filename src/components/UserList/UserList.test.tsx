@@ -64,9 +64,10 @@ describe('UserList Component', () => {
     expect(screen.getByText('Não foi possível carregar os usuários.')).toBeInTheDocument();
   });
 
-  it('should display empty message when user list is empty', () => {
+  it('should display EmptyState component when user list is empty', () => {
     renderUserList(<UserList users={[]} />);
 
-    expect(screen.getByText('Nenhum usuário encontrado.')).toBeInTheDocument();
+    expect(screen.getByText('Nenhum resultado encontrado')).toBeInTheDocument();
+    expect(screen.getByText('Tente novamente utilizando outro termo')).toBeInTheDocument();
   });
 });

@@ -19,7 +19,7 @@ export async function getUsers(
   return data;
 }
 
-export async function getAllUsers(totalCount: number = 100): Promise<RandomUserResponse> {
+export async function getAllUsers(totalCount: number = 500): Promise<RandomUserResponse> {
   const url = `${BASE_URL}?page=1&results=${totalCount}&seed=${DEFAULT_SEED}`;
 
   const response = await fetch(url);

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { User } from '@/types/user';
+import { EmptyState } from '@/components/EmptyState/EmptyState';
 import styles from './UserList.module.scss';
 
 interface UserListProps {
@@ -67,7 +68,7 @@ export function UserList({
   }
 
   if (!users.length) {
-    return <div className={styles.statusMessage}>Nenhum usuário encontrado.</div>;
+    return <EmptyState />;
   }
 
   const formatDate = (dateString: string) => {

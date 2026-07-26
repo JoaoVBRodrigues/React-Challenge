@@ -5,8 +5,8 @@ import type { RandomUserResponse } from '@/types/user';
 export function useUsers() {
   const { data, isLoading, isError, error, refetch } = useQuery<RandomUserResponse>({
     queryKey: ['users', 'all'],
-    queryFn: () => getAllUsers(100),
-    staleTime: 1000 * 60 * 10, // 10 minutes cache
+    queryFn: () => getAllUsers(500),
+    staleTime: 1000 * 60 * 15, // 15 minutes cache
   });
 
   return {

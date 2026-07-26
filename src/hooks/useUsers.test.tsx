@@ -40,7 +40,7 @@ describe('useUsers hook', () => {
           nat: 'GB',
         },
       ],
-      info: { seed: 'findpeople', results: 100, page: 1, version: '1.4' },
+      info: { seed: 'findpeople', results: 500, page: 1, version: '1.4' },
     };
 
     (userService.getAllUsers as jest.Mock).mockResolvedValue(mockData);
@@ -53,7 +53,7 @@ describe('useUsers hook', () => {
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
-    expect(userService.getAllUsers).toHaveBeenCalledWith(100);
+    expect(userService.getAllUsers).toHaveBeenCalledWith(500);
     expect(result.current.allUsers).toHaveLength(1);
     expect(result.current.allUsers[0].name.first).toBe('Jane');
     expect(result.current.isError).toBe(false);
